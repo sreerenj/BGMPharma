@@ -22,10 +22,11 @@ namespace BGMPharmaWebApp.Data.Models
         public int Id { get; set; }
         public string MedicineName { get; set; }
         public string Description { get; set; }
-        public string Manufacturer { get; set; }
+        public int ManufacturerId { get; set; }
         public string Unit { get; set; }
         public int NetQuantity { get; set; }
         public int TypeId { get; set; }
+        public string Ingredients { get; set; }
 
         #endregion
 
@@ -34,7 +35,8 @@ namespace BGMPharmaWebApp.Data.Models
 
         [ForeignKey("TypeId")]
         public virtual MedicineType MedicineType { get; set; }
-
+        [ForeignKey("ManufacturerId")]
+        public virtual Manufacturer Manufacturer { get; set; }
         #endregion
     }
 }

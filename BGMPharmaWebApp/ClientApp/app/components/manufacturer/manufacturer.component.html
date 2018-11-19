@@ -1,0 +1,13 @@
+﻿<div *ngIf="manufacturer" class="manufacturer">
+    <h1>Manufacturer</h1>
+    <ul>
+        <li>
+            <label>Name: </label>
+            <input [(ngModel)]="manufacturer.Name" placeholder="Insert the name..."/>
+        </li>
+        <li>
+            <label>Description: </label>
+            <textarea [(ngModel)]="manufacturer.Description" placeholder="Insert a suitable description..."></textarea>
+        </li>
+    </ul>
+</div>

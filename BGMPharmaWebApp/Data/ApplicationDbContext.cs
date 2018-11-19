@@ -22,7 +22,17 @@ namespace BGMPharmaWebApp.Data
 
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<MedicineType> MedicineTypes { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
         #endregion
 
+        #region Override Methods
+
+        //public override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Medicine>()
+        //        .HasRequired()
+        //}
+
+        #endregion
     }
 }
