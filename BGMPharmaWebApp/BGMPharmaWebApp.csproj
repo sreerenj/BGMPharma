@@ -33,12 +33,15 @@
     <None Remove="ClientApp\app\components\manufacturer\manufacturer-list.component.ts" />
     <None Remove="ClientApp\app\components\manufacturer\manufacturer.component.ts" />
     <None Remove="ClientApp\app\interfaces\manufacturer.ts" />
+    <None Remove="ClientApp\app\modules\material.module.ts" />
+    <None Remove="update-webpack.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\manufacturer\manufacturer-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\manufacturer\manufacturer.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\interfaces\manufacturer.ts" />
+    <TypeScriptCompile Include="ClientApp\app\modules\material.module.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

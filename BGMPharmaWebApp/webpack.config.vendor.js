@@ -15,6 +15,8 @@ const treeShakableModules = [
     'zone.js',
 ];
 const nonTreeShakableModules = [
+    '@angular/material',
+    '@angular/cdk',
     'bootstrap',
     'bootstrap/dist/css/bootstrap.css',
     'es6-promise',
