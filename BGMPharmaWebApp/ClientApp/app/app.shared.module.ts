@@ -10,6 +10,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { ManufacturerComponent } from './components/manufacturer/manufacturer.component';
+import { ManufacturerListComponent } from './components/manufacturer/manufacturer-list.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ManufacturerComponent } from './components/manufacturer/manufacturer.co
         NavMenuComponent,
         HomeComponent,
 
-        ManufacturerComponent
+        ManufacturerComponent,
+        ManufacturerListComponent
     ],
     imports: [
         CommonModule,
@@ -27,7 +29,7 @@ import { ManufacturerComponent } from './components/manufacturer/manufacturer.co
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'manufacturer', component: ManufacturerComponent},
+            { path: 'manufacturers', component: ManufacturerListComponent},
             { path: '**', redirectTo: 'home' }
         ])
     ]

@@ -30,11 +30,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\manufacturer\manufacturer-list.component.ts" />
     <None Remove="ClientApp\app\components\manufacturer\manufacturer.component.ts" />
     <None Remove="ClientApp\app\interfaces\manufacturer.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\manufacturer\manufacturer-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\manufacturer\manufacturer.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\interfaces\manufacturer.ts" />
   </ItemGroup>

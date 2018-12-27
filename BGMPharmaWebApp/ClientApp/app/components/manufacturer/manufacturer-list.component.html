@@ -1,0 +1,25 @@
+﻿<div *ngIf="manufacturers" class="manufacturer">
+    <h1>Manufacturers</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let manufacturer of manufacturers">
+            <td>{{manufacturer.id}}</td>
+            <td>{{manufacturer.name}}</td>
+            <td>{{manufacturer.address}}</td>
+            <td>{{manufacturer.email}}</td>
+            <td><button class="btn btn-default btn-sm" (click)="onEdit(manufacturer)"><span class="glyphicon glyphicon-edit"></span></button></td>
+            <td><button class="btn btn-sm btn-default" (click)="onDelete(manufacturer)"><span class="glyphicon glyphicon-remove"></span></button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
