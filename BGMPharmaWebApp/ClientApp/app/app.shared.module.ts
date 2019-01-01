@@ -8,7 +8,8 @@ import { MaterialModule } from './modules/material.module';
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ManufacturerComponent } from './components/manufacturer/manufacturer.component';
 import { ManufacturerListComponent } from './components/manufacturer/manufacturer-list.component';
 
@@ -27,6 +28,7 @@ import { ManufacturerListComponent } from './components/manufacturer/manufacture
         HttpClientModule,
         FormsModule,
         MaterialModule,
+        NoopAnimationsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

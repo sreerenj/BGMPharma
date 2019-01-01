@@ -1,13 +1,31 @@
 ﻿import { NgModule } from '@angular/core';
+import { CdkTableModule } from '@angular/cdk/table';
 import {
-    MatButtonModule,
-    MatSlideToggleModule
-} from '@angular/material';
 
+    MatButtonModule,
+    MatSlideToggleModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatProgressSpinnerModule
+} from '@angular/material';
 @NgModule({
-    exports: [
+    imports: [
         MatButtonModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatToolbarModule,
+        MatProgressSpinnerModule
+    ],
+    exports: [
+        CdkTableModule,
+        MatButtonModule,
+        MatSlideToggleModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatToolbarModule,
+        MatProgressSpinnerModule
     ]
 })
 export class MaterialModule {
