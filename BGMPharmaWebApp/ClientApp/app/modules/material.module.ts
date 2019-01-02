@@ -7,7 +7,8 @@ import {
     MatPaginatorModule,
     MatTableModule,
     MatToolbarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSortModule
 } from '@angular/material';
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import {
         MatPaginatorModule,
         MatTableModule,
         MatToolbarModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatSortModule
     ],
     exports: [
         CdkTableModule,
@@ -25,7 +27,8 @@ import {
         MatTableModule,
         MatPaginatorModule,
         MatToolbarModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatSortModule
     ]
 })
 export class MaterialModule {

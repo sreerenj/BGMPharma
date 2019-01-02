@@ -1,25 +1,26 @@
-﻿<div  class="manufacturer mat-elevation-z8" >
+﻿
+<div  class="manufacturer mat-elevation-z8" >
     <mat-toolbar>
         <span>Manufacturers</span>
     </mat-toolbar>
 
-    <mat-table #table [dataSource]="elementData">
+    <mat-table #table [dataSource]="elementData" matSort>
 
         <!-- Position Column -->
         <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef> <b>Name</b> </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Name</b> </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
         </ng-container>
 
         <!-- Name Column -->
         <ng-container matColumnDef="address">
-            <mat-header-cell *matHeaderCellDef> <b>Address</b> </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> <b>Address</b> </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
         </ng-container>
 
         <!-- Weight Column -->
         <ng-container matColumnDef="district">
-            <mat-header-cell *matHeaderCellDef> <b>District</b> </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> <b>District</b> </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.district}} </mat-cell>
         </ng-container>
 
@@ -33,6 +34,6 @@
                    [showFirstLastButtons]="true">
     </mat-paginator>
     
-    <mat-spinner color="primary" *ngIf="isLoading"></mat-spinner>
+    <mat-spinner color="primary" *ngIf="isLoading" class="center"></mat-spinner>
     
 </div>
