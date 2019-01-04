@@ -3,7 +3,11 @@
     <mat-toolbar>
         <span>Manufacturers</span>
     </mat-toolbar>
-
+    <div>
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search"/>
+        </mat-form-field>
+    </div>
     <mat-table #table [dataSource]="elementData" matSort>
 
         <!-- Position Column -->
@@ -29,7 +33,7 @@
     </mat-table>
 
     <mat-paginator #paginator
-                   [pageSize]="2"
+                   [pageSize]="2" 
                    [pageSizeOptions]="[2, 10, 20]"
                    [showFirstLastButtons]="true">
     </mat-paginator>

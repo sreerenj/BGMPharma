@@ -34,5 +34,11 @@ export class ManufacturerListComponent implements OnInit {
             },
             error => console.error(error));
     }
+
+    applyFilter(filterValue: string) {
+        filterValue = filterValue.trim();
+        filterValue = filterValue.toLowerCase();
+        this.elementData.filter = filterValue;
+    }
 }
 

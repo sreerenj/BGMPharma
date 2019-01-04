@@ -1,6 +1,7 @@
 ﻿import { Component, Inject } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
+import { ManufacturerService } from "../../shared/manufacturer.service";
 
 @Component({
     selector: "manufacturer",
@@ -13,6 +14,7 @@ export class ManufacturerComponent {
     constructor(private activatedRoute: ActivatedRoute,
         private router: Router,
         private http: HttpClient,
+        private service: ManufacturerService,
         @Inject('BASE_URL') private baseUrl: string) {
 
         this.manufacturer = <Manufacturer>{};

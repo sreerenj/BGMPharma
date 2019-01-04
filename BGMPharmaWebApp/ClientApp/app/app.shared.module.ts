@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,7 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ManufacturerComponent } from './components/manufacturer/manufacturer.component';
 import { ManufacturerListComponent } from './components/manufacturer/manufacturer-list.component';
-
+import { ManufacturerService } from './shared/manufacturer.service';
 @NgModule({
     declarations: [
         AppComponent,
@@ -20,7 +20,7 @@ import { ManufacturerListComponent } from './components/manufacturer/manufacture
         HomeComponent,
 
         ManufacturerComponent,
-        ManufacturerListComponent
+        ManufacturerListComponent,
     ],
     imports: [
         CommonModule,
@@ -29,13 +29,16 @@ import { ManufacturerListComponent } from './components/manufacturer/manufacture
         FormsModule,
         MaterialModule,
         NoopAnimationsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'manufacturers', component: ManufacturerListComponent},
+            { path: 'manufacturers', component: ManufacturerListComponent },
+            { path: 'manufacturer', component:ManufacturerComponent },
             { path: '**', redirectTo: 'home' }
         ])
-    ]
+    ],
+    providers: [ManufacturerService]
 })
 export class AppModuleShared {
 }

@@ -1,12 +1,56 @@
-﻿<div>
-    <ul>
-        <li>
-            <label>Name: </label>
-            <input [(ngModel)]="manufacturer.Name" placeholder="Insert the name..."/>
-        </li>
-        <li>
-            <label>Description: </label>
-            <textarea [(ngModel)]="manufacturer.Description" placeholder="Insert a suitable description..."></textarea>
-        </li>
-    </ul>
-</div>
+﻿<mat-toolbar>
+    Manufacturer
+</mat-toolbar>
+<form [formGroup]="service.form">
+    <mat-grid-list cols="2">
+        <mat-grid-tile>
+            <div class="controls-container">
+                <input type="hidden" formControlName="$id"/>
+                <mat-form-field>
+                    <input formControlName="name" matInput placeholder="Name"/>
+                    <mat-error>This field is mandatory</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea formControlName="address" matInput placeholder="Address"></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="district" matInput placeholder="District"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="state" placeholder="State"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="postalCode" placeholder="Postal Code"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="controls-container">
+                <mat-form-field>
+                    <input matInput formControlName="phone" placeholder="Phone"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="alternatePhone" placeholder="Alternate Phone"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="mobile" placeholder="Mobile"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="email" placeholder="Email" />
+                    <mat-error>Email format is not correct</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput formControlName="website" placeholder="Website"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea matInput formControlName="description" placeholder="Description"></textarea>
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                    <button mat-raised-button color="warn" type="button">Clear</button>
+                </div>
+            </div>
+            
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

@@ -1,2 +1,14 @@
 ﻿body {
 }
+
+.controls-container > * {
+    width: 100%;
+    padding: 10px;
+}
+
+.controls-container {
+    
+}
+.button-row {
+    margin-bottom: 15px;
+}
